@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.chinanets.sj.mapper.CpwsMapper">
+
+    <sql id="Base_Column_List">
+    ID, NDH, AJLB, AJBH, MC, WSLX, SJ, SLFY, SLFG, DLLSUO, DLLSHI, WSZZRQ, AY_ID, DSR, 
+    SFSM, NRZY, GDFY_ID, NR
+    </sql>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultType="Cpws">
+        select
+        <include refid="Base_Column_List"/>
+        from CPWS
+        where ID = #{id}
+    </select>
+
+    <select id="getCount" resultType="Integer">
+        select count(*)
+        from CPWS
+    </select>
+
+</mapper>

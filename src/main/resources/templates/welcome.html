@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <script src="../static/js/jquery-1.8.0.min.js"></script>
+
+</head>
+<h1>TEST PAGE</h1>
+
+<script type="application/javascript">
+    function query() {
+        $.ajax({
+            type: "get",
+            url: "/common/2",    //向springboot请求数据的url
+            data: {},
+            success: function (data) {
+                alert(data);
+            }
+        });
+    }
+
+</script>
+
+<body>
+<span th:text="${key}"></span>
+<input type="button" value="点击" onclick="query()"></input>
+</body>
+</html>
+'
+
